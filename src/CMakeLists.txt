@@ -1,13 +1,13 @@
 aux_source_directory(. DIR_SRCS)
 aux_source_directory(./util DIR_SRCS_UTIL)
 
-add_executable(qiniucli ${DIR_SRCS})
+add_executable(qiniutoken ${DIR_SRCS})
 
 target_link_libraries(
-    qiniucli
+    qiniutoken
     ${GFLAGS_LIBRARY}
     ${CRYPTO_LIBRARY}
     ${CURL_LIBRARY}
     qiniu
 )
-install(TARGETS qiniucli DESTINATION ${PROJECT_INSTALL_BIN_DIR})
+install(TARGETS qiniutoken DESTINATION ${PROJECT_INSTALL_BIN_DIR})
