@@ -11,7 +11,7 @@ set(PROJECT_INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
 find_path(GFLAGS_INCLUDE_DIR gflags/gflags.h)
 
-find_library(GFLAGS_LIBRARY NAMES gflag)
+find_library(GFLAGS_LIBRARY  gflags)
 find_library(CRYPTO_LIBRARY crypto)
 find_library(CURL_LIBRARY curl)
 
