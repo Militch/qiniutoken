@@ -5,7 +5,7 @@ add_executable(qiniutoken ${DIR_SRCS})
 
 target_link_libraries(
     qiniutoken
-    ${GFLAGS_LIBRARY}
+    gflags
     ${CRYPTO_LIBRARY}
     ${CURL_LIBRARY}
     qiniu
