@@ -25,7 +25,7 @@ include_directories(
     include
 )
 
-if(CMAKE_SYSTEM MATCHES "^Linux.+amd64$")
+if(CMAKE_SYSTEM MATCHES "^Linux.+64$")
     link_directories(lib/linux/amd64)
 elseif(CMAKE_SYSTEM MATCHES "^Darwin")
     link_directories(lib/darwin)
