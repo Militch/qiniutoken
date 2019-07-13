@@ -20,11 +20,9 @@ include_directories(
     include
 )
 
-MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
-
-if(CMAKE_SYSTEM_NAME MATCHES "^Linux.+amd64$")
+if(CMAKE_SYSTEM MATCHES "^Linux.+amd64$")
     link_directories(lib/linux/amd64)
-elseif(CMAKE_SYSTEM_NAME MATCHES "^Darwin")
+elseif(CMAKE_SYSTEM MATCHES "^Darwin")
     link_directories(lib/darwin)
 else()
     message(FATAL_ERROR "This platform is not supported")
