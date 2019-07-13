@@ -9,8 +9,6 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -pthread")
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 set(PROJECT_INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
 
-find_path(GFLAGS_INCLUDE_DIR gflags/gflags.h)
-
 find_library(GFLAGS_LIBRARY gflags)
 find_library(CRYPTO_LIBRARY crypto)
 find_library(CURL_LIBRARY curl)
@@ -21,13 +19,14 @@ message(STATUS "CURL lib: ${CURL_LIBRARY}")
 
 
 include_directories(
-    ${GFLAGS_INCLUDE_DIR}
     include
 )
 
 if(CMAKE_SYSTEM MATCHES "^Linux.+64$") 
-    link_directories(lib/linux/amd64)
-    link_directories(lib/linux/amd64 lib/linux/amd64/qiniu_openssl11)
+    link_directories(
+        lib/linux/amd64 
+        lib/linux/amd64/qiniu_openssl11
+    )
 elseif(CMAKE_SYSTEM MATCHES "^Darwin")
     link_directories(lib/darwin)
 else()
