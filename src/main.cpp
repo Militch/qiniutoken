@@ -34,7 +34,7 @@ char* CreateUploadToken(){
     putPolicy.scope = FLAGS_scope.c_str();
     char* uptoken;
     uptoken = Qiniu_RS_PutPolicy_Token(&putPolicy, &mac);
-    Qiniu_Free(uptoken);
+//    Qiniu_Free(uptoken);
     return uptoken;
 }
 bool HandleUploadAction(){
