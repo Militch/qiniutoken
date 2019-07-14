@@ -12,7 +12,6 @@ set(PROJECT_INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
 find_library(CRYPTO_LIBRARY crypto)
 find_library(CURL_LIBRARY curl)
 
-message(STATUS "gflags lib: ${GFLAGS_LIBRARY}")
 message(STATUS "crypto lib: ${CRYPTO_LIBRARY}")
 message(STATUS "CURL lib: ${CURL_LIBRARY}")
 
