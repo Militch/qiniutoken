@@ -3,11 +3,6 @@ aux_source_directory(./util DIR_SRCS_UTIL)
 
 add_executable(qiniutoken ${DIR_SRCS})
 
-target_link_libraries(
-    qiniutoken
-    gflags
-    ${CRYPTO_LIBRARY}
-    ${CURL_LIBRARY}
-    qiniu
-)
+TARGET_LINK_LIBRARIES(qiniutoken qiniu curl ssl crypto z gflags)
+
 install(TARGETS qiniutoken DESTINATION ${PROJECT_INSTALL_BIN_DIR})
