@@ -40,5 +40,5 @@ $ tar -xzvf qiniutoken-0.2.0_drawin_amd64.tar.gz
 
 * `ak` :  七牛云所提供的`Access key`
 * `sk` :  七牛云所提供的 `Secret key`
-* `sope`: 此参数请参考 [七牛云-上传策略](https://developer.qiniu.com/kodo/manual/1206/put-policy) 文档
+* `scope`: 此参数请参考 [七牛云-上传策略](https://developer.qiniu.com/kodo/manual/1206/put-policy) 文档
 * `upload`: 使用该参数，将会生成并输出七牛云的**上传凭证**
