@@ -4,7 +4,7 @@
 
 ## 下载与安装
 
-在 [Release](https://github.com/Militch/qiniutoken/releases) 页面中下载合适的压缩包
+根据对应的操作系统及架构，在 [**Release**](https://github.com/Militch/qiniutoken/releases) 页面中下载合适的压缩包
 
 ## 使用
 
