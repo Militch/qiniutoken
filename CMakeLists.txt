@@ -12,18 +12,18 @@ set(PROJECT_INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
 find_library(CRYPTO_LIBRARY crypto)
 find_library(CURL_LIBRARY curl)
 
-message(STATUS "crypto lib: ${CRYPTO_LIBRARY}")
-message(STATUS "CURL lib: ${CURL_LIBRARY}")
-
-
 include_directories(
     include
 )
 
 if(CMAKE_SYSTEM MATCHES "^Linux.+64$") 
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libstdc++")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc")
+    
     link_directories(
         lib/linux/amd64 
     )
+
 elseif(CMAKE_SYSTEM MATCHES "^Darwin")
     link_directories(lib/darwin)
 else()
@@ -31,3 +31,4 @@ else()
 endif()
 
 add_subdirectory(src)
+
