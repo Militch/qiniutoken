@@ -6,24 +6,6 @@
 
 在 [Release](https://github.com/Militch/qiniutoken/releases) 页面中下载合适的压缩包
 
-### Linux
-
-下载后缀为 `linux_amd64.tar.gz` 的压缩包，并解压
-
-```bash
-$ wget https://github.com/Militch/qiniutoken/releases/download/v0.2.0/qiniutoken-0.2.0_linux_amd64.tar.gz
-$ tar -xzvf qiniutoken-0.2.0_linux_amd64.tar.gz
-```
-
-### OSX
-
-针对 `OSX` 系统，请下载后缀为 `drawin_amd64.tar.gz`  的压缩包
-
-```bash
-$ wget https://github.com/Militch/qiniutoken/releases/download/v0.2.0/qiniutoken-0.2.0_drawin_amd64.tar.gz
-$ tar -xzvf qiniutoken-0.2.0_drawin_amd64.tar.gz
-```
-
 ## 使用
 
 下载并解压完成后，进软件目录，执行 `qiniutoken` 命令
